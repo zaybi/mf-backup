@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "featurings",
+  "info": {
+    "name": "featuring"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "menproducts": {
+      "via": "featuring",
+      "collection": "menproduct"
+    },
+    "womenproducts": {
+      "via": "featuring",
+      "collection": "womenproduct"
+    }
+  }
+}

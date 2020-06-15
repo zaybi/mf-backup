@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/menproducts",
+      "handler": "menproduct.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/menproducts/count",
+      "handler": "menproduct.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/menproducts/:id",
+      "handler": "menproduct.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/menproducts",
+      "handler": "menproduct.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/menproducts/:id",
+      "handler": "menproduct.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/menproducts/:id",
+      "handler": "menproduct.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

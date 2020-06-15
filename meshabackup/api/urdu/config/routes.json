@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/urdus",
+      "handler": "urdu.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/urdus/count",
+      "handler": "urdu.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/urdus/:id",
+      "handler": "urdu.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/urdus",
+      "handler": "urdu.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/urdus/:id",
+      "handler": "urdu.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/urdus/:id",
+      "handler": "urdu.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

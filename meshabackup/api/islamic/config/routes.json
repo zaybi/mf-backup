@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/islamics",
+      "handler": "islamic.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/islamics/count",
+      "handler": "islamic.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/islamics/:id",
+      "handler": "islamic.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/islamics",
+      "handler": "islamic.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/islamics/:id",
+      "handler": "islamic.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/islamics/:id",
+      "handler": "islamic.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "womenproducts",
+  "info": {
+    "name": "Womenproduct"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "productName": {
+      "type": "string",
+      "required": true
+    },
+    "productDescription": {
+      "type": "text"
+    },
+    "productColor": {
+      "type": "string"
+    },
+    "productImages": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "wcategory": {
+      "model": "wcategory",
+      "via": "womenproducts"
+    },
+    "productPrice": {
+      "type": "integer"
+    },
+    "featuring": {
+      "model": "featuring",
+      "via": "womenproducts"
+    },
+    "productAvailability": {
+      "type": "enumeration",
+      "enum": [
+        "inStock",
+        "outOfStock"
+      ]
+    }
+  }
+}

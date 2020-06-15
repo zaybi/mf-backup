@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "menproducts",
+  "info": {
+    "name": "Menproduct"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "productName": {
+      "type": "string",
+      "required": true
+    },
+    "productDescription": {
+      "type": "string"
+    },
+    "productColor": {
+      "type": "string"
+    },
+    "productImages": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "productPrice": {
+      "type": "integer"
+    },
+    "mcategory": {
+      "model": "mcategory",
+      "via": "menproducts"
+    },
+    "featuring": {
+      "model": "featuring",
+      "via": "menproducts"
+    },
+    "productAvailability": {
+      "type": "enumeration",
+      "enum": [
+        "inStock",
+        "outOfStock"
+      ]
+    }
+  }
+}

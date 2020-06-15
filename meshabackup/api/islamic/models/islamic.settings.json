@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "islamics",
+  "info": {
+    "name": "Islamic"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "productName": {
+      "type": "string",
+      "required": true
+    },
+    "productDescription": {
+      "type": "text"
+    },
+    "productSize": {
+      "type": "string"
+    },
+    "productColor": {
+      "type": "string"
+    },
+    "productPrice": {
+      "type": "integer"
+    },
+    "productImages": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
